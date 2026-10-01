@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OP1010 | Apoio à Manutenção</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f4f7;
+    color: #1f2937;
+}
+
+header {
+    background: #16324f;
+    color: white;
+    padding: 28px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 7px 0 0;
+    color: #dbe7f3;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin-top: 0;
+    color: #16324f;
+}
+
+.search {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+}
+
+.avaria {
+    border-left: 5px solid #d97706;
+}
+
+.label {
+    font-weight: bold;
+    color: #16324f;
+    margin-bottom: 4px;
+}
+
+.valor {
+    margin-top: 0;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.tag {
+    display: inline-block;
+    background: #e8eef5;
+    color: #16324f;
+    padding: 7px 11px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.manual {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #16324f;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.manual:hover {
+    background: #244d73;
+}
+
+.info {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.info div {
+    flex: 1;
+    background: #f2f4f7;
+    padding: 12px;
+    border-radius: 9px;
+}
+
+.small {
+    font-size: 12px;
+    color: #64748b;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+    padding: 15px 20px 30px;
+}
+
+#semResultados {
+    display: none;
+    text-align: center;
+    color: #64748b;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>OP1010</h1>
+    <p>Apoio à Manutenção</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Pesquisar avaria</h2>
+
+        <input
+            id="pesquisa"
+            class="search"
+            type="search"
+            placeholder="Ex.: palete, sensor, não reconhece..."
+            onkeyup="pesquisar()"
+        >
+    </div>
+
+
+    <div
+        id="avaria1"
+        class="card avaria"
+        data-pesquisa="posto não reconhece palete sensor escritor escrita palete danificado"
+    >
+
+        <h2>Posto não reconhece palete</h2>
+
+        <p class="label">Sintoma</p>
+        <p class="valor">
+            O posto não reconhece a palete.
+        </p>
+
+        <p class="label">Causa identificada</p>
+        <p class="valor">
+            Sensor escritor da palete danificado.
+        </p>
+
+        <p class="label">Verificação / Resolução</p>
+        <p class="valor">
+            Verificar o funcionamento do sensor de escrita da pal
