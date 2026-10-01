@@ -14,24 +14,25 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f2f4f7;
-    color: #1f2937;
+    background: #f3f5f8;
+    color: #263238;
 }
 
 header {
-    background: #16324f;
+    background: #193b5c;
     color: white;
     padding: 28px 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 header p {
-    margin: 7px 0 0;
-    color: #dbe7f3;
+    margin: 8px 0 0;
+    font-size: 18px;
+    color: #e1e8ef;
 }
 
 .container {
@@ -42,15 +43,15 @@ header p {
 
 .card {
     background: white;
-    border-radius: 14px;
+    border-radius: 16px;
     padding: 20px;
     margin-bottom: 18px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 h2 {
     margin-top: 0;
-    color: #16324f;
+    color: #193b5c;
 }
 
 .search {
@@ -62,57 +63,40 @@ h2 {
 }
 
 .avaria {
-    border-left: 5px solid #d97706;
+    border-left: 6px solid #e58a00;
 }
 
 .label {
     font-weight: bold;
-    color: #16324f;
-    margin-bottom: 4px;
+    color: #193b5c;
+    margin-bottom: 5px;
 }
 
 .valor {
     margin-top: 0;
-    margin-bottom: 18px;
-    line-height: 1.5;
+    margin-bottom: 20px;
+    line-height: 1.55;
 }
 
 .tag {
     display: inline-block;
-    background: #e8eef5;
-    color: #16324f;
-    padding: 7px 11px;
+    background: #e8eef4;
+    color: #193b5c;
+    padding: 8px 12px;
     border-radius: 8px;
     font-size: 14px;
-}
-
-.manual {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: #16324f;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.manual:hover {
-    background: #244d73;
 }
 
 .info {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .info div {
     flex: 1;
-    background: #f2f4f7;
-    padding: 12px;
+    background: #f3f5f8;
+    padding: 13px;
     border-radius: 9px;
 }
 
@@ -121,61 +105,14 @@ h2 {
     color: #64748b;
 }
 
-footer {
+.manual {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 15px;
+    background: #193b5c;
+    color: white;
     text-align: center;
-    color: #64748b;
-    font-size: 12px;
-    padding: 15px 20px 30px;
-}
-
-#semResultados {
-    display: none;
-    text-align: center;
-    color: #64748b;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>OP1010</h1>
-    <p>Apoio à Manutenção</p>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <h2>Pesquisar avaria</h2>
-
-        <input
-            id="pesquisa"
-            class="search"
-            type="search"
-            placeholder="Ex.: palete, sensor, não reconhece..."
-            onkeyup="pesquisar()"
-        >
-    </div>
-
-
-    <div
-        id="avaria1"
-        class="card avaria"
-        data-pesquisa="posto não reconhece palete sensor escritor escrita palete danificado"
-    >
-
-        <h2>Posto não reconhece palete</h2>
-
-        <p class="label">Sintoma</p>
-        <p class="valor">
-            O posto não reconhece a palete.
-        </p>
-
-        <p class="label">Causa identificada</p>
-        <p class="valor">
-            Sensor escritor da palete danificado.
-        </p>
-
-        <p class="label">Verificação / Resolução</p>
-        <p class="valor">
-            Verificar o funcionamento do sensor de escrita da pal
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10
